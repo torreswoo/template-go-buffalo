@@ -1,0 +1,11 @@
+development:
+  dialect: "sqlite3"
+  database: /Users/1002475/.gvm/pkgsets/go1.10/global/src/github.com/torreswoo/blog_development.sqlite
+
+test:
+  dialect: "sqlite3"
+  database: /Users/1002475/.gvm/pkgsets/go1.10/global/src/github.com/torreswoo/blog_test.sqlite
+
+production:
+  dialect: "sqlite3"
+  database: /Users/1002475/.gvm/pkgsets/go1.10/global/src/github.com/torreswoo/blog_production.sqlite
