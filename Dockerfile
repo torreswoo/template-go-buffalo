@@ -11,6 +11,7 @@ ADD yarn.lock .
 RUN yarn install --no-progress
 ADD . .
 RUN go get $(go list ./... | grep -v /vendor/)
+RUN go get github.com/mattn/go-sqlite3
 RUN buffalo build --static -o /bin/app
 
 FROM alpine

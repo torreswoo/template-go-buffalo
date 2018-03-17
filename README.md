@@ -30,3 +30,9 @@ $ buffalo db migrate up
 $ buffalo dev           # localhost:3000
 ```
 - [http://127.0.0.1:3000](http://127.0.0.1:3000)
+
+## Docker support
+```bash
+$ docker build -f Dockerfile -t torreswoo/go-blog .
+$ docker run --name go-blog -p 3000:3000 torreswoo/go-blog
+```
