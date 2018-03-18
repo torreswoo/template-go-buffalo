@@ -3,6 +3,7 @@
 [Powered by Buffalo](http://gobuffalo.io)
 
 Torres template project using Buffalo. A Go web development eco-system, designed to make the life of a Go web developer easier.
+- use SQLite3
 
 ## requirements
 ```bash

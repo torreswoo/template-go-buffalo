@@ -11,6 +11,8 @@ import (
 	"github.com/gobuffalo/buffalo/middleware/i18n"
 	"github.com/gobuffalo/packr"
 	"github.com/torreswoo/blog/models"
+
+	"github.com/gobuffalo/buffalo/render"
 )
 
 // ENV is used to help switch settings based on where the
@@ -57,6 +59,10 @@ func App() *buffalo.App {
 		app.GET("/", HomeHandler)
 
 		app.Resource("/users", UsersResource{})
+
+		app.GET("/tests", func (c buffalo.Context) error {
+			return c.Render(200, render.String(c.Param("name")))
+		})
 		app.ServeFiles("/", assetsBox) // serve files from the public directory
 	}
 
