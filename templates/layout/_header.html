@@ -1,0 +1,21 @@
+<div class="header-logo">
+    <a href="<%= rootPath() %>">
+        <img class="logo-buffalo" src="<%= rootPath() %>assets/images/logo.svg" alt="">
+        Torres Buffalo Template
+    </a>
+</div>
+
+<div class="header-menu">
+    <ul class="nav nav-pills nav-fill">
+
+        <li class="nav-item <%= if (current_route.PathName == "rootPath") { %> active <% } %>">
+            <a href="/" class="nav-link">Home</a>
+        </li>
+        <li class="nav-item <%= if (current_route.PathName == "routesPath") { %> active <% } %> ">
+            <a href="/routes" class="nav-link"> Routing</a>
+        </li>
+        <li class="nav-item <%= if (current_route.PathName == "usersPath") { %> active <% } %>">
+            <a href="/users" class="nav-link"> Users</a>
+        </li>
+    </ul>
+</div>
